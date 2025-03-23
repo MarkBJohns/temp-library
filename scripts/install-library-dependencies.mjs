@@ -2,7 +2,8 @@
 import { readFile, writeFile } from "fs/promises";
 import path from "path";
 
-const projectRoot = process.env.INIT_CWD || process.cwd();
+// const projectRoot = process.env.INIT_CWD || process.cwd();
+const projectRoot = process.cwd();
 const consumerPkgPath = path.join(projectRoot, "package.json");
 const libraryPkgPath = new URL("../package.json", import.meta.url).pathname;
 
