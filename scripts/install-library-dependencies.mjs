@@ -1,11 +1,13 @@
 #!usr/bin/env node
 import { readFile, writeFile } from "fs/promises";
+import { fileURLToPath } from "url";
 import path from "path";
 
 // const projectRoot = process.env.INIT_CWD || process.cwd();
 const projectRoot = process.cwd();
 const consumerPkgPath = path.join(projectRoot, "package.json");
-const libraryPkgPath = new URL("../package.json", import.meta.url).pathname;
+// const libraryPkgPath = new URL("../package.json", import.meta.url).pathname;
+const libraryPkgPath = fileURLToPath(new URL("../package.json", import.meta.url));
 
 const consumerRaw = await readFile(consumerPkgPath, "utf-8");
 const libraryRaw = await readFile(libraryPkgPath, "utf-8");
