@@ -1,0 +1,52 @@
+@use "../../../../../sass/root" as *;
+
+.menuLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainLink {
+    font-weight: 500;
+    font-size: 2rem;
+    text-decoration: none;
+    color: inherit;
+    
+    &:hover,
+    &:focus {
+        color: #87BCDE;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLink:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.subLink {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    color: inherit;
+    
+    &:hover,
+    &:focus {
+        color: #87BCDE;
+    }
+}

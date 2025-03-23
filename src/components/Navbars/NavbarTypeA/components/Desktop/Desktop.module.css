@@ -1,0 +1,62 @@
+.navbar {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  opacity: 0.4;
+}
+.navbar:hover, .navbar.isTop {
+  opacity: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: min(1320px + 8rem, 100%);
+  place-self: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+@media (max-width: 990px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 630px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.logo {
+  grid-column: 1/span 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 990px) {
+  .logo {
+    width: 75%;
+  }
+}
+
+.navMenu {
+  grid-column: 3/span 10;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 4rem;
+}
+@media (max-width: 990px) {
+  .navMenu {
+    grid-column: 3/span 6;
+  }
+}/*# sourceMappingURL=Desktop.module.css.map */

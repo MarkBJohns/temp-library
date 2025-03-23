@@ -1,0 +1,221 @@
+@use "../../sass/root" as *;
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #87BCDE;
+    padding: 8rem 0;
+    
+    img {
+        border-radius: 0 !important;
+    }
+}
+
+.container {
+    @include global-grid-columns;
+}
+
+.logo {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    
+    @media (max-width: $first-grid-break) {
+        grid-column: 2 / span 2;
+    }
+    
+    @media (max-width: $mobile-grid-break) {
+        grid-column: 1 / span 4;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        
+        @media (max-width: $mobile-grid-break) {
+            width: 80%;
+        }
+    }
+}
+
+.contacts {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: $first-grid-break) {
+        grid-column: 2 / span 2;
+    }
+    
+    @media (max-width: $second-grid-break) {
+        grid-column: 1 / span 4;
+    }
+}
+
+.linkList {
+    grid-column: 5 / span 4;
+    grid-row: 2;
+    
+    
+    @media (max-width: $first-grid-break) {
+        grid-column: 4 / span 2;
+    }
+    
+    @media (max-width: $second-grid-break) {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+    }
+}
+
+.hours {
+    grid-column: 9 / span 4;
+    grid-row: 2;
+    
+    @media (max-width: $first-grid-break) {
+        grid-column: 6 / span 2;
+    }
+    
+    @media (max-width: $second-grid-break) {
+        grid-column: 1 / span 4;
+        grid-row: 4;
+    }
+}
+
+.copyright {
+    grid-column: 1 / span 12;
+    grid-row: 3;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8rem;
+    
+    a {
+        margin-left: 4px;
+    }
+    
+    @media (max-width: $first-grid-break) {
+        grid-column: 1 / span 8;
+        margin-top: 6rem;
+    }
+    
+    @media (max-width: $second-grid-break) {
+        grid-column: 1 / span 4;
+        padding: 0 2rem;
+        line-height: 1.4;
+        margin-top: 4rem;
+    }
+    
+    @media (max-width: $mobile-grid-break) {
+        font-size: 1.4rem;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    place-self: center;
+    
+    @media (max-width: $second-grid-break) {
+        margin-bottom: 1rem;
+    }
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+    place-self: center;
+    
+    @media (max-width: $mobile-grid-break) {
+        gap: 3rem;
+    }
+}
+
+.contactItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+    img {
+        max-width: 20px;
+        max-height: 20px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $color-white;
+        
+        &:hover,
+        &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: $first-grid-break) {
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+    }
+}
+
+.links {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    place-self: center;
+    list-style: none;
+    text-align: center;
+    
+    @media (max-width: $mobile-grid-break) {
+        gap: 3rem;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 1.8rem;
+    
+    &:hover,
+    &:focus {
+        outline: none;
+        text-decoration: underline;
+    }
+}
+
+.hoursList {
+    width: 100%;
+    place-self: center;
+    
+    li {
+        display: flex;
+        justify-content: space-evenly;
+        
+        @media (max-width: $first-grid-break) {
+            flex-direction: column;
+        }
+        
+        @media (max-width: $first-grid-break) {
+            flex-direction: unset;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.contacts,
+.linkList,
+.hours {
+    
+    @media (max-width: $second-grid-break) {
+        margin-bottom: 3rem;
+    }
+}

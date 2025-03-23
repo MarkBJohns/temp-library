@@ -1,0 +1,123 @@
+.navbar {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: min(1320px + 8rem, 100%);
+  place-self: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+@media (max-width: 990px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 630px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 100%;
+  min-width: 6rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.burger {
+  grid-column: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.burger img {
+  width: 50%;
+  min-width: 4rem;
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sidebar {
+  position: fixed;
+  top: -1rem;
+  right: -100%;
+  width: 100%;
+  height: 50vh;
+  background-color: red;
+  color: #000000;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+.sidebar.open {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: min(1320px + 8rem, 100%);
+  place-self: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  height: 8rem;
+}
+@media (max-width: 990px) {
+  .sidebarHeader {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 630px) {
+  .sidebarHeader {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cancel {
+  grid-column: 4;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+.cancel img {
+  width: 3rem;
+}
+
+.navMenu {
+  grid-column: 1/span 4;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+.navMenu a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.4rem;
+}/*# sourceMappingURL=Mobile.module.css.map */

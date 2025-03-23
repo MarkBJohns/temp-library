@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: black;
+        color: white;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        overflow-x: hidden;
+        width: 100%;
+    }
+}

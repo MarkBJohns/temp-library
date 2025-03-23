@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+@mixin global-grid-columns {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: min(calc(1320px + 8rem), 100%);
+    place-self: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    
+    @media (max-width: $first-grid-break) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    
+    @media (max-width: $second-grid-break) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
