@@ -3,17 +3,10 @@ import { readdir, mkdir, copyFile, readFile, writeFile } from "fs/promises";
 import { existsSync } from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
-import { findUp } from "find-up";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const projectRoot = path.dirname(await findUp("package.json"));
-const mapPath = path.join(
-    projectRoot,
-    "node_modules",
-    "pinellas-web-library",
-    "component-map.json"
-);
+const mapPath = path.join(__dirname, "..", "component-map.json");
 
 if (!existsSync(mapPath)) {
     console.error("component-map.json not found");
