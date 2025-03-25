@@ -11,7 +11,6 @@
     "import": "node ./node_modules/pinellas-web-library/load-component.mjs"
   },
   "dependencies": {
-    "find-up": "^7.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0",
