@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "type": "module",
+  "bin": {
+  "template": "./scripts/upload-template.mjs"
+},
   "scripts": {
     "dev": "vite",
     "build": "vite build",
